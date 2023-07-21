@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+ <mapper namespace="com.elquineas.book.persistance.UserDao">
+ 	
+ 	<select id="findUser">
+	 	SELECT *
+	 	  FROM tbl_users
+	 	 WHERE u_name LIKE concat('%', #{search} ,'%')
+	 	    OR u_tel LIKE concat('%', #{search} ,'%')
+ 	</select>
+ 	
+ 	<insert id="insertUser">
+	 	INSERT INTO tbl_users (u_code, u_name,u_tel, u_addr)
+		VALUES (#{u_code}, #{u_name}, #{u_tel}, #{u_addr})
+ 	</insert>
+ 	<update id="updateUser">
+ 		UPDATE tbl_users
+ 		   SET u_name = #{u_name}
+ 		     , u_tel = #{u_tel}
+ 		     , u_addr = #{u_addr}
+ 		 WHERE u_code = #{u_code}
+ 	</update>
+ 	
+ </mapper>
+ 

@@ -1,0 +1,110 @@
+@charset "UTF-8";
+
+form.main {
+  /* border: 1px solid red; */
+  width: 70%;
+  margin: 10px auto;
+}
+
+section table.main.book {
+  width: 100%;
+  height: 50px;
+  /* margin: 20px auto; */
+  font-size: 25px;
+  font-weight: bolder;
+}
+
+section table.main.book tr {
+}
+
+section table.main.book tr td {
+  height: 35px;
+  text-align: center;
+}
+
+section table.main.book tr td:nth-of-type(1) {
+  width: 12%;
+}
+section table.main.book tr td:nth-of-type(2),
+section table.main.book tr td:nth-of-type(3),
+section table.main.book tr td:nth-of-type(4),
+section table.main.book tr td:nth-of-type(5) {
+  width: 22%;
+}
+
+section table.main.book tr td input {
+  height: 35px;
+  width: 95%;
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+button.main.save {
+  display: inline-block;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  width: 95%;
+  height: 35px;
+  line-height: 30px;
+  background-color: skyblue;
+  color: white;
+  cursor: pointer;
+}
+
+button.main.save:hover {
+  background-color: lightgray;
+  color: black;
+  box-shadow: 2px 2px 2px black;
+}
+
+div.main.book.msg {
+  display: inline-block;
+  width: 100%;
+  height: 50px;
+  font-size: 1.5rem;
+  color: tomato;
+  text-align: center;
+  padding: 10px;
+  /* display: none; */
+}
+
+section table.main.list {
+  width: 80%;
+  margin: 30px auto;
+}
+section table.main.list th,
+section table.main.list td {
+  text-align: center;
+  height: 30px;
+}
+section table.main.list a.a_update {
+  display: inline-block;
+  width: 100%;
+  height: 90%;
+  /* border: 1px solid gray; */
+  border-radius: 5px;
+  background-color: skyblue;
+  color: gray;
+  text-align: center;
+  text-decoration: none;
+}
+section table.main.list a.a_update:hover {
+  background-color: rgb(79, 158, 189);
+  color: white;
+  cursor: pointer;
+}
+form.search_form {
+  width: 70%;
+  margin: 0 auto;
+}
+form.search_form input {
+  width: 79%;
+}
+#book_btn,
+#user_btn {
+  width: 20%;
+  margin-left: auto;
+}

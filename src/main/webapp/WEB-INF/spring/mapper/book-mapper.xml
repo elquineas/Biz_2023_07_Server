@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+ <mapper namespace="com.elquineas.book.persistance.BookDao">
+ 	<insert id="insertBook">
+	 	INSERT INTO tbl_books(b_code,b_name,b_auther,b_comp,b_year,b_iprice,b_rprice)
+		VALUES(#{b_code},#{b_name},#{b_auther},#{b_comp},#{b_year},#{b_iprice},#{b_rprice});
+ 	</insert>
+ 	<update id="updateBook">
+	 	UPDATE tbl_books
+	 	   SET  b_code = #{b_code}
+	 	     ,  b_name = #{b_name}
+	 	     ,  b_auther = #{b_auther}
+	 	     ,  b_comp = #{b_comp}
+	 	     ,  b_year = #{b_year}
+	 	     ,  b_iprice = #{b_iprice} 
+	 	     ,  b_rprice = #{b_rprice}
+	 	 WHERE b_code = #{b_code}
+ 	</update>
+ 	
+ 	<select id="findBook">
+	 	SELECT *
+	 	  FROM tbl_books
+	 	 WHERE b_name LIKE concat('%', #{search} ,'%')
+	 	    OR b_auther LIKE concat('%', #{search} ,'%')
+ 	</select>
+ </mapper>
+ 
